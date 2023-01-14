@@ -14,7 +14,7 @@ A dedicated, all-inclusive hub for building, deploying and managing Nexa back-en
 ### Extended Services
 
 - GraphQL server (Nexa Shell)
-- Meta validator (Nexa Runner)
+- Meta Validation server (Nexa Runner)
 
 
 ## One-click Deployment Providers
