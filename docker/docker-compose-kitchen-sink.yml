@@ -1,8 +1,8 @@
 ################################################################################
 #
-# Nexabase Dockerfile
+# Nexabase Dockerfile (Kitchen Sink)
 #
-# These are the most popular presets.
+# These are the most common presets.
 ##
 
 version: "3.7"

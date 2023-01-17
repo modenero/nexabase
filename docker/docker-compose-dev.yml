@@ -1,8 +1,8 @@
 ################################################################################
 #
-# Nexabase Dockerfile
+# Nexabase Dockerfile (Developer Mode)
 #
-# These are the most popular presets.
+# NOTE: All debugging/reporting is turned on by default.
 ##
 
 version: "3.7"
