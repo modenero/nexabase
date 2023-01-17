@@ -2,7 +2,8 @@
 
 ### https://nexabase.app
 
-A web-based management application for Nexabase.
+A decentralized application station manager.
+
 
 ## Project Setup
 

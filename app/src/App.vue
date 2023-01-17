@@ -5,14 +5,15 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+    <img alt="Vue logo" class="logo" src="@/assets/logo.png" width="125" height="125" />
 
     <div class="wrapper">
-      <HelloWorld msg="Nexabase App" />
+      <HelloWorld msg="Nexabase Vue" />
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/download">Download</RouterLink>
       </nav>
     </div>
   </header>
