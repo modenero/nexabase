@@ -12,10 +12,11 @@ services:
     image: couchdb:3.3.1
     restart: always
     ports:
-      - "5984:5984"
+      - "127.0.0.1:5984:5984"
     environment:
       - COUCHDB_USER=admin
-      - COUCHDB_PASSWORD=<YOUR_SECURE_PASSWORD>
+      - COUCHDB_PASSWORD=password
+      - COUCHDB_ERLANG_COOKIE=5dbef5d8-0faf-4865-9e31-d73b0da2575d
     volumes:
       - ./volumes/couchdb:/opt/couchdb/data
 
