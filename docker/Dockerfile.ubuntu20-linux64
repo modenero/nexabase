@@ -1,0 +1,23 @@
+# Base image
+FROM bchunlimited/nexa:ubuntu20.04
+
+# Pull from the Bitcoin Unlimted repo.
+RUN git clone https://gitlab.com/nexa/nexa
+
+# Set the working directory.
+WORKDIR /nexa
+
+# Checkout the "development" branch.
+git checkout dev
+
+# Run the auto-generation script.
+RUN ./autogen.sh
+
+# Run the configuration command.
+RUN ./configure --disable-dependency-tracking --enable-glibc-back-compat --enable-reduce-exports LDFLAGS=-static-libstdc++ --with-gui=no --with-incompatible-bdb
+
+# Build the executables.
+RUN make -j`nproc`
+
+# Make configuration folder.
+RUN mkdir /root/.nexa/
