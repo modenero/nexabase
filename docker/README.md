@@ -15,7 +15,7 @@ These docker files are for easily testing specific setups locally when a gitlab-
 
 example:
 
-`docker build --no-cache -t img-nexa-ubu18-linux64 -f Dockerfile.ubuntu20-linux64 .`
+`docker build --no-cache -t img-nexa-ubu20-linux64 -f Dockerfile.ubuntu20-linux64 .`
 
 ## To start an image in a new container in a bash shell
 `docker run -it -d --name <container name> <imagename> bash`
