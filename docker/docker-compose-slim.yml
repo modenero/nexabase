@@ -5,7 +5,7 @@
 # These are the most basic modules required to run the minimal setup.
 ##
 
-version: "3.7"
+version: '3.8'
 
 services:
 

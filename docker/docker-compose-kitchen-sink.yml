@@ -5,7 +5,7 @@
 # These are the most common presets.
 ##
 
-version: "3.7"
+version: '3.8'
 
 services:
 
