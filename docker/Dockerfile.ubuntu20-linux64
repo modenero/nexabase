@@ -1,8 +1,8 @@
 # Base image
 #FROM bchunlimited/nexa:ubuntu20.04
 #FROM debian:bullseye-slim
-#FROM debian:bullseye
-FROM ubuntu:20.04
+FROM debian:bullseye
+#FROM ubuntu:20.04
 
 # Download latest listing of available packages:
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y update
@@ -48,7 +48,16 @@ RUN ./configure --disable-dependency-tracking --enable-glibc-back-compat --enabl
 RUN make -j`nproc`
 RUN make install
 
+# Install Rust + dependencies.
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+RUN apt install clang cmake build-essential # for building 'rust-rocksdb'
+
+# Install Rostrum.
+RUN cargo install rostrum --features=nexa --locked
+RUN ln -s $(which rostrum) /usr/local/bin/rostrum
+
 EXPOSE 7227
 EXPOSE 7228
 
-CMD ["nexad", "-d", "-printtoconsole"]
+#CMD ["nexad", "-daemon"]
+CMD ["nexad", "-printtoconsole"] # FOR DEBUGGING PURPOSES ONLY
